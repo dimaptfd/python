@@ -1,8 +1,4 @@
-def pagar_factura(clave):
-    claves = list(facturas.keys())  
-    for clave in claves:  
-        facturas.pop(clave)  
-    print(facturas)
+
 
 
 def abono_factura(abono):
@@ -13,6 +9,12 @@ def abono_factura(abono):
 def agregar_factura(factura, valor):
    global facturas
    facturas[factura]=valor 
+
+def pagar_factura(fac):
+  for key in list(facturas.keys()):
+    fac = facturas.key(fac)
+    facturas.pop(fac)
+
 
 facturas = {}
 while True:
@@ -29,24 +31,22 @@ while True:
             else:
                     valor_factura = int(input(f"ingrese el coste de la factura {factura}: "))
                     agregar_factura(factura, valor_factura)
+                    print(facturas)
                     print("**************************************************************************")
-
     elif menu == 2:
-        menu2 = int(input("1 para pahgar factura: \n2 para abonar factura: "))
+        menu2 = int(input("1 para pagar factura: \n2 para abonar factura: "))
         if menu2 == 1:
-            factura1 = int(input("ingrese numero de factura a pagar: "))
-            pagar_factura(factura1)
+            fac = int(input("ingrese numero de factura a pagar: "))
+            pagar_factura(fac)
             print("**************************************************************************")
         elif menu2 == 2:
-            factura = int(input("ingrese numero de factura a abonar: "))
+            factura2 = int(input("ingrese numero de factura a abonar: "))
             abono = int(input(f"ingrese valor bono a pagar para la factura {factura}: "))
             abono_factura(abono)
+            print(facturas)
             print("**************************************************************************")
-                
-
-    else: 
-        print(facturas)
-   
+    elif menu == 3: 
+         break
         
       
 

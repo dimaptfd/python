@@ -33,10 +33,10 @@ while True:
             print("**********************************************************")
             print(cesta_de_compras)
     else: 
-         print("**********************************************************")
-         total = sum(cesta_de_compras.values())
-         print(f"el total de la compra es igual a: {total} COP")
-         break
+     print("**********************************************************")
+     total = sum(cesta_de_compras.values())
+     print(f"el total de la compra es igual a: {total} COP")
+     break
 
 
 
