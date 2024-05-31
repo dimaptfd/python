@@ -4,12 +4,12 @@ def agragar_producto(prod, valor):
   global cesta_de_compras
   cesta_de_compras[prod] = valor
 
-def eliminar_producto(prod ):
+def eliminar_producto(prod):
    cesta_de_compras.pop(prod)
 
 
 while True:
-    menu  =  int(input ( "1 para agregar producto al carrito, 2 para eliminar un producto, 3 para ver productos en el carrito, ingresar cualquier otro numero para finalizar y mostrar total a pagar: "))
+    menu  =  int(input ( "1 para agregar producto al carrito: 2 para eliminar un producto, 3 para ver productos en el carrito, ingresar cualquier otro numero para finalizar y mostrar total a pagar: "))
    
     if menu == 1:
         isAppRunning = True

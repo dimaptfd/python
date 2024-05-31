@@ -14,8 +14,7 @@ def abono_factura(valor, volos):
    for valor, quele in facturas.items(valor):
        facturas[valor]=quele
        quele -= volos 
-
-   print(f"valor abonado: {abono} \nvalor a pagar: {quele}")
+       print(f"valor abonado: {abono} \nvalor a pagar: {quele}")
 
 
 facturas = {}
@@ -28,13 +27,13 @@ while True:
         while isAppRunning:
             factura = str(input("ingrese factura nueva: "))
             if factura == "":
-                    isAppRunning=False
-                    break
+                isAppRunning=False
+                break
             else:
-                    valor_factura = int(input(f"ingrese el coste de la factura {factura}: "))
-                    agregar_factura(factura, valor_factura)
-                    print(facturas)
-                    print("**************************************************************************")
+                valor_factura = int(input(f"ingrese el coste de la factura {factura}: "))
+                agregar_factura(factura, valor_factura)
+                print(facturas)
+                print("**************************************************************************")
     elif menu == 2:
         menu2 = int(input("1 para pagar factura: \n2 para abonar factura: "))
         fac = int(input("ingrese numero de factura: "))
