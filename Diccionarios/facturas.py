@@ -8,11 +8,14 @@ def agregar_factura(factura, valor):
    facturas[factura]=valor 
 
 def pagar_factura(key):
-   facturas.pop(key)
+   if key in facturas.keys(key):
+        del facturas[key]
+        print(facturas)
 
 def abono_factura(valor, volos):
-   for valor, quele in facturas.items(valor):
-       facturas[valor]=quele
+   global facturas
+   if valor in facturas:
+       factura[valor]= quele
        quele -= volos 
        print(f"valor abonado: {abono} \nvalor a pagar: {quele}")
 
@@ -36,15 +39,13 @@ while True:
                 print("**************************************************************************")
     elif menu == 2:
         menu2 = int(input("1 para pagar factura: \n2 para abonar factura: "))
-        fac = int(input("ingrese numero de factura: "))
+        
         if menu2 == 1:
-            if fac in facturas:
-                pagar_factura(fac)
-                print("**************************************************************************")
-            else:
-                print("Factura no encontrada")
+            fac = int(input("ingrese numero de factura: "))
+            pagar_factura(fac)
+            print("**************************************************************************")
         elif menu2 == 2:
-            
+            fac = int(input("ingrese numero de factura: "))
             abono = int(input(f"ingrese valor bono a pagar para la factura {fac}: "))
             abono_factura(fac, abono)
             print(facturas)
@@ -54,4 +55,4 @@ while True:
         
       
 
-   
+      
